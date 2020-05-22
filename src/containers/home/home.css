@@ -1,0 +1,13 @@
+.item-content {
+    /* text-align: center; */
+    min-height: 75vh;
+}
+.close-container {
+    text-align: right;
+    width: 100%;
+}
+.close-link {
+    cursor: pointer;
+    color: blue;
+    display: inline-block;padding-right: 15px;
+}
