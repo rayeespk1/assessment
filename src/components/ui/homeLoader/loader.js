@@ -10,7 +10,7 @@ const Loader = (props) => {
                 <div className="loader-content" />
                 <img src={rakbankLogo} className="loader-brand-logo" alt="Rak Bank" />
                 <div id="nlpt"></div>
-                <div style={{ animation: "a-s .25s 1.25s 1 forwards", opacity: "0" }} class="msg">Loading Gmail&hellip;</div>
+                <div style={{ animation: "a-s .25s 1.25s 1 forwards", opacity: "0" }} className="msg">Loading...&hellip;</div>
 
             </div>
         </div>
