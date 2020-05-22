@@ -1,0 +1,10 @@
+.footer {
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background: #202020;
+    text-align: center;
+}
+.f-txt {
+    padding: 15px 0;
+}
