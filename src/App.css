@@ -1,0 +1,23 @@
+.loader:empty {
+  position: absolute;
+  top: calc(50% - 4em);
+  left: calc(50% - 4em);
+  width: 6em;
+  height: 6em;
+  border: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-left: 1.1em solid #e92228;
+  border-radius: 50%;
+  animation: load8 1.1s infinite linear;
+  /* background-image: url(./assets/images/logo.png);
+  background-size: 100px 100px; */
+  /* background-position: center; */
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
