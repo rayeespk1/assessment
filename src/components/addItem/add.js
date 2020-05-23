@@ -16,7 +16,8 @@ class Add extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true
+                    required: true,
+                    minLength: 3
                 },
                 valid: false,
                 touched: false
@@ -29,7 +30,8 @@ class Add extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true
+                    required: true,
+                    minLength: 4
                 },
                 valid: false,
                 touched: false
@@ -87,15 +89,15 @@ class Add extends Component {
             );
         }
 
-        return (
+        return ( 
             <section className="item-form">
                 <h3 data-testid="headingTag">Enter Item Details</h3>
                 {errorMessage}
                 <form onSubmit={this.submitHandler}>
                     {form}
                     <div className="close-container">
-                        <p className="close-link" onClick={this.closeModal}>Cancel</p>
-                        <Button btnType="Success">SAVE</Button>
+                        <p className="close-link" onClick={this.props.modalClosed}>Cancel</p>
+                        <Button btnClass="btn-info">SAVE</Button>
                     </div>
                 </form>
             </section>

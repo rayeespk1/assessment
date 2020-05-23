@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import rakbankLogo from '../../../assets/images/rakbank-logo.jpg';
+import rakbankLogo from '../../../assets/images/logo.png';
 import "./header.css"
 
 const Header = (props) => {

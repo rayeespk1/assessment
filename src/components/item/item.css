@@ -2,7 +2,7 @@
     width: 100px;
     height: 80px;
     margin: 10px;
-    padding: 15px;
+    padding: 14px;
     background: #000;
     float: left;
     cursor: pointer;
@@ -10,14 +10,30 @@
 .item.completed {
     color: #3c763d;
     background-color: #dff0d8;
-    border-color: #d6e9c6;
+    background-image: linear-gradient(45deg, #fff 50%, transparent 50%), 
+    linear-gradient(-45deg, #fff 50%, transparent 50%);
+    background-position: bottom left, bottom left, bottom left, bottom left;
+    background-size: 12px 12px;
+    background-repeat: repeat-x;
 }
 .item.pending {
     color: #8a6d3b;
     background-color: #fcf8e3;
-    border-color: #faebcc;
+    /* border: 1px solid #faebcc; */
+    background-image: linear-gradient(45deg, #fff 50%, transparent 50%), 
+    linear-gradient(-45deg, #fff 50%, transparent 50%);
+    background-position: bottom left, bottom left, bottom left, bottom left;
+    background-size: 12px 12px;
+    background-repeat: repeat-x;
 }
 
 .item p {
     text-transform: capitalize;
 }
+
+.banner-vertical {
+    background-image: linear-gradient(45deg, #fff 50%, transparent 50%), linear-gradient(-45deg, #fff 50%, transparent 50%);
+    background-position: top left, top left, bottom left, bottom left;
+    background-size: 12px 12px;
+    background-repeat: repeat-x;
+  }

@@ -85,13 +85,13 @@ class Auth extends Component {
         }
 
         let form = formElementsArray.map(formElement => (
-            <div class="input-container" key={formElement.id}>
+            <div className="input-container" key={formElement.id}>
                 {formElement.config.elementConfig.type === 'password' ? (
                     <FontAwesomeIcon icon={faLock} />
                 ) : (
-                    <FontAwesomeIcon icon={faUser} />
-                )}
-                
+                        <FontAwesomeIcon icon={faUser} />
+                    )}
+
                 <Input
                     key={formElement.id}
                     elementType={formElement.config.elementType}
@@ -100,9 +100,9 @@ class Auth extends Component {
                     invalid={!formElement.config.valid}
                     shouldValidate={formElement.config.validation}
                     touched={formElement.config.touched}
-                    changed={(event) => this.inputChangedHandler(event, formElement.id)} 
+                    changed={(event) => this.inputChangedHandler(event, formElement.id)}
                     inputClass="icon-input"
-                    />
+                />
             </div>
         ));
 
@@ -129,9 +129,9 @@ class Auth extends Component {
                 <form onSubmit={this.submitHandler}>
                     {form}
                     {errorMessage}
-                    <div className="w-100 txt-center">
+                    <div className="w-100 txt-center auth-btn-container">
                         <Button btnType="Success">
-                            {this.state.isSignup ? 'SIGNUP' : 'SIGNIN'}
+                            {this.state.isSignup ? 'Sign Up' : 'Login'}
                             {" "}<FontAwesomeIcon icon={faArrowRight} size="xs" />
                         </Button>
                     </div>
@@ -139,9 +139,12 @@ class Auth extends Component {
                         <img src={rakbankLogo} className="img-fluid" alt="Rak Bank" />
                     </div>
                 </form>
-                <a
-                    clicked={this.switchAuthModeHandler}
-                    btnType="Danger">SWITCH TO {this.state.isSignup ? 'SIGNIN' : 'SIGNUP'}</a>
+                <div className="w-100 txt-center">
+                    <Button btnType="Info"
+                        clicked={this.switchAuthModeHandler}
+                    >Switch to {this.state.isSignup ? 'Login' : 'Sign Up'}
+                    </Button>
+                </div>
             </div>
         );
     }

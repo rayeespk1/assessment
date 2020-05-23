@@ -1,6 +1,6 @@
 .Input {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     box-sizing: border-box;
 }
 
@@ -15,22 +15,45 @@
     border: 1px solid #ccc;
     background-color: white;
     font: inherit;
-    padding: 6px 10px;
+    padding: 8px;
     display: block;
     width: 100%;
     box-sizing: border-box;
 }
 
 .InputElement.icon-input {
-    padding-left: 30px;
+    padding-left: 33px;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    background-color: white;
+    font: inherit;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .InputElement:focus {
     outline: none;
-    background-color: #ccc;
+    background-color: #f7f7f7;
 }
 
 .Invalid {
     border: 1px solid red;
     background-color: #FDA49A;
 }
+
+::placeholder {
+    color: #ccc;
+    opacity: 0.6; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ccc;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ccc;
+  }
