@@ -14,6 +14,10 @@ class Home extends Component {
         modalStatus: false
     }
 
+    componentDidMount() {
+        this.props.onFetchItems();
+    }
+
     toggleModal = () => {
         this.setState({ modalStatus: !this.state.modalStatus });
     }
@@ -36,7 +40,7 @@ class Home extends Component {
                             {this.props.items.length > 0 ? (
                                 <>
                                     {this.props.items.map((item, itemIndex) => {
-                                        return (<Item key={item.id} {...item} changeStatus={(id) => this.props.onChangeItemStatus(id)} />);
+                                        return (<Item key={itemIndex} {...item} changeStatus={(id) => this.props.onChangeItemStatus(id)} />);
                                     })}
                                 </>
                             ) : (
@@ -73,6 +77,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        onFetchItems: () => dispatch(actions.fetchItems()),
         onAddItem: (item) => dispatch(actions.addItem(item)),
         onChangeItemStatus: (id) => dispatch(actions.changeItemStatus(id))
     };

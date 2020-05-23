@@ -11,6 +11,7 @@ const button = (props) => {
     } 
     return (
         <button
+            data-testid="buttonTag"
             disabled={props.disabled}
             className={btnClass}
             onClick={props.clicked}>{props.children}</button>

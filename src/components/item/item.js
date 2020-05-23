@@ -3,9 +3,9 @@ import "./item.css"
 
 const Item = ({id, title, status, changeStatus}) => {
     return (
-        <div onClick={()=> changeStatus(id)} className={"item " + status}>
-            <p>{title}</p>
-            <p>{status}</p>
+        <div data-testid="outerTag" className={"item " + status} onClick={()=> changeStatus(id)} >
+            <p data-testid="titleTag">{title}</p>
+            <p data-testid="statusTag">{status}</p>
         </div>
     );
 };

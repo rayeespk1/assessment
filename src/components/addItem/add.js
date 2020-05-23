@@ -89,7 +89,7 @@ class Add extends Component {
 
         return (
             <section className="item-form">
-                <h3>Enter Item Details</h3>
+                <h3 data-testid="headingTag">Enter Item Details</h3>
                 {errorMessage}
                 <form onSubmit={this.submitHandler}>
                     {form}

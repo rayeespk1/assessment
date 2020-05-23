@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <section
+    class="item-form"
+  >
+    <h3
+      data-testid="headingTag"
+    >
+      Enter Item Details
+    </h3>
+    <form>
+      <div
+        class="Input"
+      >
+        <input
+          class="InputElement"
+          placeholder="Item Name"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="Input"
+      >
+        <textarea
+          class="InputElement"
+          placeholder="Comments"
+          type="text"
+        />
+      </div>
+      <div
+        class="close-container"
+      >
+        <p
+          class="close-link"
+        >
+          Cancel
+        </p>
+        <button
+          class="Button Success"
+          data-testid="buttonTag"
+        >
+          SAVE
+        </button>
+      </div>
+    </form>
+  </section>
+</DocumentFragment>
+`;

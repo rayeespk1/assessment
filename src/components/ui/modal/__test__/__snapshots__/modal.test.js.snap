@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <div
+    class="Backdrop"
+    data-testid="backdropTag"
+  />
+  <div
+    class="Modal"
+    style="transform: translateY(0); opacity: 1;"
+  >
+    <p>
+      modal content
+    </p>
+  </div>
+</DocumentFragment>
+`;

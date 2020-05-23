@@ -6,6 +6,7 @@ export {
 } from './auth';
 
 export {
+    fetchItems,
     addItem,
     changeItemStatus,
 } from './item';

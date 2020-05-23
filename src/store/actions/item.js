@@ -1,12 +1,51 @@
 import * as actionTypes from './actionTypes';
+import axios from 'axios';
 import update from 'immutability-helper';
+
+/**
+ * fetch items & store to state
+ */
+export const fetchItems = () => {
+    return (dispatch, getState) => {
+        const userid = getState().auth.userId;
+
+        axios.get('https://rakassessment.firebaseio.com/items.json?orderBy="userid"&equalTo="' + userid + '"')
+            .then(response => {
+                let items = [];
+                Object.keys(response.data).map((itemIndex) => {
+                    response.data[itemIndex].id = itemIndex;
+                    items.push(response.data[itemIndex]);
+                });
+                dispatch(updateItems(items));
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    };
+};
 
 /**
  * Add item to state
  */
 export const addItem = (item) => {
-    item.status = 'pending';
-    item.id = Math.random();
+    return (dispatch, getState) => {
+        item.status = 'pending';
+        item.userid = getState().auth.userId;
+
+        /**
+            Add item on firebase database
+        **/
+        axios.post('https://rakassessment.firebaseio.com/items.json', item)
+            .then(response => {
+                dispatch(addItemToState(item));
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    };
+};
+
+export const addItemToState = (item) => {
     return {
         type: actionTypes.ADD_ITEM,
         payload: item
@@ -42,13 +81,22 @@ export const changeItemStatus = (itemId) => {
             }
         })
 
-        selectedItem.status = selectedItem.status === 'pending' ? 'completed' : 'pending';
-        var updatedComment = update(items[selectedIndex], { $set: selectedItem });
+        const newStatus = selectedItem.status === 'pending' ? 'completed' : 'pending';
+        selectedItem.status = newStatus;
+        var updatedItem = update(items[selectedIndex], { $set: selectedItem });
 
-        var newItems = update(items, {
-            $splice: [[selectedIndex, 1, updatedComment]]
-        });
-
-        dispatch(updateItems(newItems));
+        /**
+            * Upadate item on firebase database
+        */
+        axios.put('https://rakassessment.firebaseio.com/items/' + updatedItem.id + '/status.json', '"' + newStatus + '"')
+            .then(response => {
+                var newItems = update(items, {
+                    $splice: [[selectedIndex, 1, updatedItem]]
+                });
+                dispatch(updateItems(newItems));
+            })
+            .catch(err => {
+                console.log(err);
+            });
     };
 };
