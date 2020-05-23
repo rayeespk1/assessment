@@ -5,13 +5,16 @@ import './loader.css';
 const Loader = (props) => {
     return (
         <div id="loading">
-            <div style={{ height: "100%", textAlign: "center" }}>
-                <div style={{ height: "50%", margin: "0 0 -140px" }}></div>
-                <div className="loader-content" />
-                <img src={rakbankLogo} className="loader-brand-logo" alt="Rak Bank" />
+            <div className="one">
+                <div className="two"></div>
+            </div>
+            <div className="three">
+                <div className="four"></div>
+                <div className="five">
+                    <img src={rakbankLogo} alt="Rak Bank" className="zoom-ani" width="130px" />
+                </div>
                 <div id="nlpt"></div>
-                <div style={{ animation: "a-s .25s 1.25s 1 forwards", opacity: "0" }} className="msg">Loading...&hellip;</div>
-
+                <div className="six msg">Loading...</div>
             </div>
         </div>
     );

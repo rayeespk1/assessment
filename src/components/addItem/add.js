@@ -41,7 +41,9 @@ class Add extends Component {
 
     submitHandler = (event) => {
         event.preventDefault();
-        this.props.addItem({ title: this.state.controls.title.value, comments: this.state.controls.comments.value });
+        if (this.state.controls.title.valid && this.state.controls.comments.valid) {
+            this.props.addItem({ title: this.state.controls.title.value, comments: this.state.controls.comments.value });
+        }
     };
 
     inputChangedHandler = (event, controlName) => {
@@ -89,7 +91,7 @@ class Add extends Component {
             );
         }
 
-        return ( 
+        return (
             <section className="item-form">
                 <h3 data-testid="headingTag">Enter Item Details</h3>
                 {errorMessage}

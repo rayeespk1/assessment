@@ -9,7 +9,7 @@ export const fetchItems = () => {
     return (dispatch, getState) => {
         const userid = getState().auth.userId;
 
-        axios.get('https://rakassessment.firebaseio.com/items.json?orderBy="userid"&equalTo="' + userid + '"')
+        axios.get(process.env.REACT_APP_FIREBASE_DB_URL+'?orderBy="userid"&equalTo="' + userid + '"')
             .then(response => {
                 let items = [];
                 Object.keys(response.data).map((itemIndex) => {
@@ -35,7 +35,7 @@ export const addItem = (item) => {
         /**
             Add item on firebase database
         **/
-        axios.post('https://rakassessment.firebaseio.com/items.json', item)
+        axios.post(process.env.REACT_APP_FIREBASE_DB_URL, item)
             .then(response => {
                 dispatch(addItemToState(item));
             })
