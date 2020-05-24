@@ -1,32 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#React Assessment
 
-1. Clone the repository
+This is a small web app built with [React](https://reactjs.org/). In this app user can login and manage item status in there dashboard.
 
-2. Install packages
+Technologies we are used in this project are [React](https://reactjs.org/), [Redux](https://redux.js.org/). We are used firebase for storing data & also for authentication.
 
-### `yarn`
+## Getting Started
 
-or
+### Run it locally
 
-### `npm install`
+1. Clone the project
 
-## Available Scripts
+```
+git clone https://github.com/rayeespk1/assessment.git
+```
 
-In the project directory, you can run:
+2. Install dependencies
 
-### `yarn start`
+```
 
-or
+# Using npm or yarn || In the project directory, you can run:
+yarn || npm install
+```
 
-### `npm start`
+3. Run the app
 
-Runs the app in the development mode.<br />
+```
+yarn start || npm start
+```
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `yarn test`
+4. Test the app
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+yarn test || npm test
+```
 
-### `yarn build`
+5. Build the app
 
+```
+yarn build || npm build
+```
