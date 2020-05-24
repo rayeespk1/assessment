@@ -9,7 +9,9 @@ exports[`renders 1`] = `
     <p
       data-testid="titleTag"
     >
-      head title
+      <b>
+        head title
+      </b>
     </p>
     <p
       data-testid="statusTag"
