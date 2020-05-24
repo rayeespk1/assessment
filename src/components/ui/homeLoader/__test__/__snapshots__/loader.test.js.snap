@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <div
+    id="loading"
+  >
+    <div
+      class="one"
+    >
+      <div
+        class="two"
+      />
+    </div>
+    <div
+      class="three"
+    >
+      <div
+        class="four"
+      />
+      <div
+        class="five"
+      >
+        <img
+          alt="Rak Bank"
+          class="zoom-ani"
+          data-testid="logoTag"
+          src="logo.png"
+          width="130px"
+        />
+      </div>
+      <div
+        id="nlpt"
+      />
+      <div
+        class="six msg"
+        data-testid="loadingTag"
+      >
+        Loading...
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

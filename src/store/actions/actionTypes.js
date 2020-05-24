@@ -6,3 +6,4 @@ export const SET_AUTH_REDIRECT_PATH = 'SET_AUTH_REDIRECT_PATH';
 
 export const ADD_ITEM = 'ADD_ITEM';
 export const CHANGE_STATUS = 'CHANGE_STATUS';
+export const LOADING_STATUS = 'LOADING_STATUS';

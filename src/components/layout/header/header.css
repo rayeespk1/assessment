@@ -7,4 +7,6 @@
 }
 .logout-link {
     margin-top: 30px;
+    text-decoration: none;
+    color: #7b7b7b;
 }

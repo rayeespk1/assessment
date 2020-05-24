@@ -1,8 +1,17 @@
-import React from 'react'
-import {render, fireEvent, screen} from '@testing-library/react'
-import Loading from '../loader'
+import React from 'react';
+import '@testing-library/jest-dom';
+import { render, cleanup } from "@testing-library/react";
+import Loading from '../loader';
 
-test('shows the loader', () => {
-  const testMessage = 'Test Message'
-  render(<Loading />)
-})
+afterEach(cleanup);
+
+test("renders", () => {
+    const { asFragment } = render(<Loading />);
+    expect(asFragment()).toMatchSnapshot();
+});
+
+test("loading correct data", () => {
+    const { getByTestId, getByText } = render(<Loading />);
+    expect(getByTestId("loadingTag")).toHaveTextContent("Loading...");
+    expect(getByTestId("logoTag")).toHaveClass("zoom-ani");
+});

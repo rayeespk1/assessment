@@ -37,17 +37,24 @@ class Home extends Component {
                 <div className="home-page">
                     <div className="container">
                         <div className="item-content">
-                            {this.props.items.length > 0 ? (
-                                <div data-testid="itemContainer">
-                                    {this.props.items.map((item, itemIndex) => {
-                                        return (<Item key={itemIndex} {...item} changeStatus={(id) => this.props.onChangeItemStatus(id)} />);
-                                    })}
-                                </div>
+                            {this.props.loading ? (
+                                <p>Loading...</p>
                             ) : (
-                                    <div className="item-content">
-                                        <p>Please add items</p>
-                                    </div>
+                                    <>
+                                        {this.props.items.length > 0 ? (
+                                            <div data-testid="itemContainer">
+                                                {this.props.items.map((item, itemIndex) => {
+                                                    return (<Item key={itemIndex} {...item} changeStatus={(id) => this.props.onChangeItemStatus(id)} />);
+                                                })}
+                                            </div>
+                                        ) : (
+                                                <div className="item-content">
+                                                    <p>Please add items</p>
+                                                </div>
+                                            )}
+                                    </>
                                 )}
+
                         </div>
                         <>
                             <div className="w-100 txt-center">

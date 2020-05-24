@@ -7,6 +7,7 @@ import update from 'immutability-helper';
  */
 export const fetchItems = () => {
     return (dispatch, getState) => {
+        dispatch(updateLoading(true));
         const userid = getState().auth.userId;
 
         axios.get(process.env.REACT_APP_FIREBASE_DB_URL+'?orderBy="userid"&equalTo="' + userid + '"')
@@ -42,6 +43,13 @@ export const addItem = (item) => {
             .catch(err => {
                 console.log(err);
             });
+    };
+};
+
+export const updateLoading = (status) => {
+    return {
+        type: actionTypes.LOADING_STATUS,
+        payload: status,
     };
 };
 

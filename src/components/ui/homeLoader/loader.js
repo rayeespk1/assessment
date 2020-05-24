@@ -11,10 +11,10 @@ const Loader = (props) => {
             <div className="three">
                 <div className="four"></div>
                 <div className="five">
-                    <img src={rakbankLogo} alt="Rak Bank" className="zoom-ani" width="130px" />
+                    <img data-testid="logoTag" src={rakbankLogo} alt="Rak Bank" className="zoom-ani" width="130px" />
                 </div>
                 <div id="nlpt"></div>
-                <div className="six msg">Loading...</div>
+                <div data-testid="loadingTag" className="six msg">Loading...</div>
             </div>
         </div>
     );
