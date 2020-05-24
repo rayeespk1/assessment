@@ -1,8 +1,8 @@
 # React Assessment
 
-This is a small web app built with [React](https://reactjs.org/). In this app user can login and manage item status in there dashboard.
+This is a small web app built with [React](https://reactjs.org/). In this app user can login and manage item & it's status in the dashboard.
 
-Technologies we are used in this project are [React](https://reactjs.org/), [Redux](https://redux.js.org/). We are used firebase for storing data & also for authentication.
+Technologies used in this project are [React](https://reactjs.org/), [Redux](https://redux.js.org/). We are used firebase for storing data and also for authentication.
 
 ## Getting Started
 
