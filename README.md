@@ -37,7 +37,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 yarn test || npm test
 ```
 
-5. Get coverage report
+Get coverage report
 
 ```
 yarn test --coverage --watchAll=false
