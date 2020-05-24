@@ -16,8 +16,7 @@ class Add extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true,
-                    minLength: 3
+                    required: true
                 },
                 valid: false,
                 touched: false
@@ -30,19 +29,22 @@ class Add extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true,
-                    minLength: 4
+                    required: true
                 },
                 valid: false,
                 touched: false
             }
-        }
+        },
+        validationError: null
     }
 
     submitHandler = (event) => {
         event.preventDefault();
         if (this.state.controls.title.valid && this.state.controls.comments.valid) {
+            this.setState({validationError: null})
             this.props.addItem({ title: this.state.controls.title.value, comments: this.state.controls.comments.value });
+        } else {
+            this.setState({validationError: "Please fill all the fields"})
         }
     };
 
@@ -97,6 +99,9 @@ class Add extends Component {
                 {errorMessage}
                 <form onSubmit={this.submitHandler}>
                     {form}
+                    {this.state.validationError && (
+                        <p className="error-txt">{this.state.validationError}</p>
+                    )}
                     <div className="close-container">
                         <p className="close-link" onClick={this.props.modalClosed}>Cancel</p>
                         <Button btnClass="btn-info">SAVE</Button>
