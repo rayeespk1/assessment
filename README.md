@@ -1,4 +1,4 @@
-#React Assessment
+# React Assessment
 
 This is a small web app built with [React](https://reactjs.org/). In this app user can login and manage item status in there dashboard.
 
