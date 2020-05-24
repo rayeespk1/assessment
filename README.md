@@ -1,6 +1,6 @@
 # React Assessment
 
-![alt text](https://github.com/rayeespk1/assessmentblob/master/public/screenshots/screenshot.jpg?raw=true)
+![alt text](https://github.com/rayeespk1/assessment/blob/master/public/screenshots/screenshot.jpg?raw=true)
 
 This is a small web app built with [React](https://reactjs.org/). In this app user can login and manage item & it's status in the dashboard.
 
