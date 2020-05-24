@@ -36,38 +36,35 @@ class Home extends Component {
             <Layout {...this.props}>
                 <div className="home-page">
                     <div className="container">
-                        <div className="item-content">
-                            {this.props.loading ? (
-                                <p>Loading...</p>
-                            ) : (
-                                    <>
-                                        {this.props.items.length > 0 ? (
-                                            <div data-testid="itemContainer">
-                                                {this.props.items.map((item, itemIndex) => {
-                                                    return (<Item key={itemIndex} {...item} changeStatus={(id) => this.props.onChangeItemStatus(id)} />);
-                                                })}
+                        {this.props.loading ? (
+                            <p>Loading...</p>
+                        ) : (
+                                <>
+                                    {this.props.items.length > 0 ? (
+                                        <div data-testid="itemContainer" className="item-content">
+                                            {this.props.items.map((item, itemIndex) => {
+                                                return (<Item key={itemIndex} {...item} changeStatus={(id) => this.props.onChangeItemStatus(id)} />);
+                                            })}
+                                        </div>
+                                    ) : (
+                                            <div className="item-content">
+                                                <p>Please add items</p>
                                             </div>
-                                        ) : (
-                                                <div className="item-content">
-                                                    <p>Please add items</p>
-                                                </div>
-                                            )}
-                                    </>
-                                )}
-
-                        </div>
-                        <>
-                            <div className="w-100 txt-center">
-                                <Button data-testid="addBtn" btnClass="btn-success" clicked={() => this.toggleModal()}>Add Item</Button>
-                            </div>
-                            {this.state.modalStatus && (
-                                <Modal show={this.state.modalStatus} modalClosed={this.closeModal}>
-                                    <AddItem addItem={(item) => this.addItem(item)} modalClosed={this.closeModal} />
-                                </Modal>
+                                        )}
+                                </>
                             )}
-                        </>
                     </div>
                 </div>
+                <>
+                    <div className="w-100 txt-center">
+                        <Button data-testid="addBtn" btnClass="btn-success" clicked={() => this.toggleModal()}>Add Item</Button>
+                    </div>
+                    {this.state.modalStatus && (
+                        <Modal show={this.state.modalStatus} modalClosed={this.closeModal}>
+                            <AddItem addItem={(item) => this.addItem(item)} modalClosed={this.closeModal} />
+                        </Modal>
+                    )}
+                </>
             </Layout>
         );
     }

@@ -1,7 +1,25 @@
+.home-page{
+    height: 70vh;
+}
+@media (max-width: 767px) {
+    .home-page{
+        height: 100%;
+    }
+  }
+
 .item-content {
     padding-top: 15px;
-    min-height: 75vh;
+    display: flex;
+    /* min-height: 75vh; */
+    flex-wrap: wrap;
+    align-items: center;
 }
+
+@media (max-width: 767px) {
+    .item-content {
+        justify-content: center;
+    }
+  }
 .close-container {
     text-align: right;
     width: 100%;

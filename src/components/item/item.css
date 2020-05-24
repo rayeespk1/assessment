@@ -1,12 +1,25 @@
 .item {
-    width: 100px;
-    height: 80px;
+    width: 15%;
+    height: 100%;
+    min-height: 120px;
     margin: 10px;
     padding: 14px;
     background: #000;
-    float: left;
     cursor: pointer;
 }
+@media (max-width: 767px) {
+    .item {
+        width: 40%;
+        height: 100%;
+        min-height: 120px;
+        margin: 5px;
+        padding: 10px;
+        background: #000;
+        cursor: pointer;
+    }
+  }
+  
+
 .item.completed {
     color: #3c763d;
     background-color: #dff0d8;

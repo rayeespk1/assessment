@@ -104,7 +104,7 @@ class Add extends Component {
                     )}
                     <div className="close-container">
                         <p className="close-link" onClick={this.props.modalClosed}>Cancel</p>
-                        <Button btnClass="btn-info">SAVE</Button>
+                        <Button btnType="Success">SAVE</Button>
                     </div>
                 </form>
             </section>

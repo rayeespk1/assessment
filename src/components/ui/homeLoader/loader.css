@@ -26,8 +26,8 @@
 }
 
 #nlpt::before {
-  animation: a-lb 20s 3s linear forwards;
-  -webkit-animation: a-lb 20s 3s linear forwards;
+  animation: a-lb 10s 3s linear forwards;
+  -webkit-animation: a-lb 10s 3s linear forwards;
   background-color: #db4437;
   content: '';
   display: block;
@@ -189,8 +189,8 @@
 }
 
 .zoom-ani{
-  animation: logomove 5s infinite;
-  -webkit-animation: logomove 5s infinite;
+  animation: logomove 5s;
+  -webkit-animation: logomove 5s;
 }
 @keyframes logomove {
   0%   {opacity: 0; width: 80px;}

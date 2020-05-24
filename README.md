@@ -1,5 +1,7 @@
 # React Assessment
 
+![alt text](https://github.com/rayeespk1/assessment/public/screenshots/screenshot.jpg?raw=true)
+
 This is a small web app built with [React](https://reactjs.org/). In this app user can login and manage item & it's status in the dashboard.
 
 Technologies used in this project are [React](https://reactjs.org/), [Redux](https://redux.js.org/). We are used firebase for storing data and also for authentication.
